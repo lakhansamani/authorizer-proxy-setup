@@ -17,7 +17,7 @@ const main = async () => {
 
     app.use('/', express.static('public'));
 
-    app.use(proxy('http://localhost:8080', {}));
+    app.use(proxy('http://authorizer:8080', {}));
 
     // bind port and start server
     const port: number = parseInt(process.env.PORT || '3000', 10);

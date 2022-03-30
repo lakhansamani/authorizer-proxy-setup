@@ -1,0 +1,14 @@
+version: '3'
+services:
+  authorizer:
+    container_name: authorizer
+    #image: lakhansamani/authorizer:0.17.0
+    image: lakhansamani/authorizer:0.18.0
+    environment:
+      - DATABASE_URL=data.db
+      - DATABASE_TYPE=sqlite
+  proxy:
+    build: ./proxy
+    container_name: proxy
+    ports:
+      - 3000:3000
