@@ -2,7 +2,7 @@ version: '3'
 services:
   authorizer:
     container_name: authorizer
-    image: lakhansamani/authorizer:0.24.0
+    image: lakhansamani/authorizer:1.1.27
     environment:
       - DATABASE_URL=data.db
       - DATABASE_TYPE=sqlite
